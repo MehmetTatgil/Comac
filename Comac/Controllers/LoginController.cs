@@ -11,6 +11,7 @@ namespace Comac.Controllers
         // GET: Login
         public ActionResult Index()
         {
+            int a = 5;
             return View();
         }
     }
