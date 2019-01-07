@@ -14,6 +14,7 @@ namespace Comac.Controllers
             if (Session["user"] == null)
             {
                 RedirectToAction("Login", "Login");
+                RedirectToAction("DenemeLog", "DenemeLog");
             }
             
             return View();

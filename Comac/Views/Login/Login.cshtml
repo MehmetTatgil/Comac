@@ -1,17 +1,24 @@
 ﻿
-@{
-    ViewBag.Title = "Login";
-}
+
+
+
+
 <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-<h2>Login</h2>
+<body>
+    <div class="jumbotron jumbotron-fluid">
+        <div class="form-group">
+            @using (Html.BeginForm())
+            {
+                <div class="form-check-label">@Html.Label("Kullanici Adi")</div>
+                <div>@Html.TextBox("name")</div>
+                <div>@Html.Label("Kullanici Parola")</div>
+                <div>@Html.TextBox("password")</div>
 
-@using (Html.BeginForm())
-{
-    <div>@Html.Label("Kullanıcı Adı")</div>
-    <div>@Html.TextBox("name")</div>
-    <div>@Html.Label("Kullanıcı Parola")</div>
-    <div>@Html.TextBox("password")</div>
+                <input type="submit" class="btn btn-info" value="Baglan">
+            }
 
-    <input type="submit"value="Login"/>
-}
-
+        </div>
+    </div>
+</body>
+<script src="~/Scripts/bootstrap.min.js"></script>
+<script src="~/Scripts/jquery-3.0.0.min.js"></script>
